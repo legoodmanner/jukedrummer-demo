@@ -2,6 +2,8 @@ This is the demo page for the ISMIR2022 paper [Jukedrummer: Conditional Beat-awa
 
 Author: [Yueh-Kao Wu](), [Ching-Yu Chiu](https://github.com/SunnyCYC), [Yi-Hsuan Yang](http://mac.citi.sinica.edu.tw/~yang/)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Abstract
 This is the demo page of Jukedrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. 
 
@@ -11,7 +13,7 @@ We have our model highly refer to [Jukebox](https://github.com/openai/jukebox). 
 
 <div id='wrap'>
     <img id='flowchart' src='src/img/flowchart.png' width='300px'>
-    <img id='transformer' src='src/img/transformer.png' width='400px'>
+    <img id='transformer' src='src/img/transformer.png' width='440px'>
 </div>
 
 ## Demo audio
