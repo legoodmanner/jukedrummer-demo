@@ -3,7 +3,7 @@ This is the demo page for the ISMIR2022 paper [Jukedrummer: Conditional Beat-awa
 Author: [Yueh-Kao Wu](), [Ching-Yu Chiu](https://github.com/SunnyCYC), [Yi-Hsuan Yang](http://mac.citi.sinica.edu.tw/~yang/)
 
 ## Abstract
-This is the demo page of Jukedrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. According to our observation, our model is capable to perform functionally when using most of our testing data as input which is divided from the joined dataset of MUSDB18, MedleyDB, and MixingSecret prior to our training. However, the results are relatively unacceptable when using album recording drumless music outside our joined dataset as input. We conjecture that our model is sensitive to audio compression, original sample rate, or even mixing. This generalizability issue remains a significant problem that demands to be solved in future works. 
+This is the demo page of Jukedrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. 
 
 
 ## Model Structure & Configurations
@@ -11,7 +11,7 @@ We have our model highly refer to [Jukebox](https://github.com/openai/jukebox). 
 
 <div id='wrap'>
     <img id='flowchart' src='src/img/flowchart.png' width='300px'>
-    <img id='transformer' src='src/img/transformer.png' width='360px'>
+    <img id='transformer' src='src/img/transformer.png' width='400px'>
 </div>
 
 ## Demo audio
@@ -53,12 +53,12 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 ### Part 3
 <hr>
 
-We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks with external input data.
+We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks with external input data. We use [spleeter](https://github.com/deezer/spleeter) to extract drumless tracks of the first and the second tracks.
 
 **Earth, Wind & Fire - September**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gs069dndIYk?start=50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
+|Drumless|Sample 1|Sample 2|Sample 3|
 |<audio src="src/audio/part3/september/drumless.wav" controls="" preload="">drumless extracted by spleeter</audio>|<audio src="src/audio/part3/september/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/september/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/september/3.wav" controls="" preload=""></audio>|
 
 <hr>
@@ -66,7 +66,7 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 **伍佰 Wu Bai & China Blue - 挪威的森林 Norwegian fores**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gPpZJlE0Ca8?start=122" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
+|Drumless|Sample 1|Sample 2|Sample 3|
 |<audio src="src/audio/part3/norway/drumless.wav" controls="" preload="">drumless extracted by spleeter</audio>|<audio src="src/audio/part3/norway/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/norway/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/norway/3.wav" controls="" preload=""></audio>|
 
 <hr>
@@ -74,7 +74,7 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 **All of me**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vl7QFVt2jwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
+|Drumless|Sample 1|Sample 2|Sample 3|
 |<audio src="src/audio/part3/all/drumless.wav" controls="" preload="">original drumless</audio>|<audio src="src/audio/part3/all/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/all/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/all/3.wav" controls="" preload=""></audio>|
 
 <hr>
@@ -83,18 +83,22 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dvgZkm1xWPE?start=70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
+|Drumless|Sample 1|Sample 2|Sample 3|
 <audio src="src/audio/part3/viva/drumless.wav" controls="" preload="">original drumless</audio>|<audio src="src/audio/part3/viva/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/viva/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/viva/3.wav" controls="" preload=""></audio>|
 
 
 <hr>
 
-1. [Poster & Video]()
-2. [Code](): Still work in progress
+## Limitation
 
-- At times the model generates total silence, though it can be avoided by sampling the LM again.
-- The model may struggle to change its tempo going through different sections of a song.
-- Moreover, the gener- ation might be out-of-sync with the input in the beginning few seconds, until the model gets sufficient context.
+First, our model lacks generalizability. To elaborate, according to our observation, our model is capable to perform functionally when using most of our testing data as input which is divided from the joined dataset of MUSDB18, MedleyDB, and MixingSecret prior to our training. However, the results are relatively worse when using album recording drumless music outside our joined dataset as input. We conjecture that our model is sensitive to audio compression, original sample rate, or even mixing. 
+
+Second, the stability of our model still needs to be improved. To be more specific, our model at times struggles to change its tempo going through different sections of a song. Moreover, the generation might be out of sync with the input in the beginning few seconds, until the model gets sufficient context.
+
+Last but not least, it would be helpful if the drumless input contains some "rhythmical hints", such as strong bass, rhythm guitar, and any other sources that can be conducive for our model to locate beats and downbeats. If so, the model is likely to perform better. On the other hand, if the model can't get enough clues from input to locate beats and tempo, the result of generation would be pretty bad. 
+
+To sum up, issues related to generalizability, stability, and rhythm dependency are remains significant problems that demand to be solved in future works.
+
 
 ### Contact 
 
