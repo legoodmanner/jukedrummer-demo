@@ -10,7 +10,7 @@ This is the demo page of Jukedrummer, the work generates a drum track in the aud
 We have our model highly refer to [Jukebox](https://github.com/openai/jukebox). While there are hundreds of self-attention layers in Jukebox, there are only 9 layers in both encoder and decoder in our work. In addition, we also apply so called "Beat Information Extractor" to extract beat information externally in aid of generating rhythmically consistent drum accompaniment audio.
 
 <div id='wrap'>
-    <img id='flowchart' src='src/img/flowchart.png' width='360px'>
+    <img id='flowchart' src='src/img/flowchart.png' width='300px'>
     <img id='transformer' src='src/img/transformer.png' width='360px'>
 </div>
 
@@ -43,7 +43,7 @@ In this demo section contains 3 parts. The first part is the comparison between 
 We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks with identical parameters and other configurations.
 
 
-|  |Drumless|GroundTruth|1|2|3|4|
+|  |Drumless|GroundTruth|Sample 1|Sample 2|Sample 3|Sample 4|
 |1.|<audio src="src/audio/part2/Q1/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/4.wav" controls="" preload=""></audio>|
 |2.|<audio src="src/audio/part2/Q2/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q2/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q2/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q2/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q2/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q2/4.wav" controls="" preload=""></audio>|
 |3.|<audio src="src/audio/part2/Q3/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/4.wav" controls="" preload=""></audio>|
@@ -58,7 +58,7 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 **Earth, Wind & Fire - September**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gs069dndIYk?start=50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
 |<audio src="src/audio/part3/september/drumless.wav" controls="" preload="">drumless extracted by spleeter</audio>|<audio src="src/audio/part3/september/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/september/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/september/3.wav" controls="" preload=""></audio>|
 
 <hr>
@@ -66,7 +66,7 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 **伍佰 Wu Bai & China Blue - 挪威的森林 Norwegian fores**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gPpZJlE0Ca8?start=122" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
 |<audio src="src/audio/part3/norway/drumless.wav" controls="" preload="">drumless extracted by spleeter</audio>|<audio src="src/audio/part3/norway/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/norway/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/norway/3.wav" controls="" preload=""></audio>|
 
 <hr>
@@ -74,7 +74,7 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 **All of me**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vl7QFVt2jwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
 |<audio src="src/audio/part3/all/drumless.wav" controls="" preload="">original drumless</audio>|<audio src="src/audio/part3/all/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/all/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/all/3.wav" controls="" preload=""></audio>|
 
 <hr>
@@ -82,7 +82,8 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 **Coldplay - Viva La Vida**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dvgZkm1xWPE?start=70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+
+|Drumless|Sample 1|Sample 2|Sample 3|Sample 4|
 <audio src="src/audio/part3/viva/drumless.wav" controls="" preload="">original drumless</audio>|<audio src="src/audio/part3/viva/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/viva/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part3/viva/3.wav" controls="" preload=""></audio>|
 
 
