@@ -42,7 +42,6 @@ In this demo section contains 3 parts. The first part is the comparison between 
 
 We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks with identical parameters and other configurations.
 
-<div id='wrap'>
 
 |  |Drumless|GroundTruth|1|2|3|4|
 |1.|<audio src="src/audio/part2/Q1/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q1/4.wav" controls="" preload=""></audio>|
@@ -50,7 +49,6 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 |3.|<audio src="src/audio/part2/Q3/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q3/4.wav" controls="" preload=""></audio>|
 |4.|<audio src="src/audio/part2/Q4/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/4.wav" controls="" preload=""></audio>|
 
-</div>
 
 ### Part 3
 <hr>
