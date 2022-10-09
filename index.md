@@ -9,8 +9,10 @@ This is the demo page of Jukedrummer, the work generates a drum track in the aud
 ## Model Structure & Configurations
 We have our model highly refer to [Jukebox](https://github.com/openai/jukebox). While there are hundreds of self-attention layers in Jukebox, there are only 9 layers in both encoder and decoder in our work. In addition, we also apply so called "Beat Information Extractor" to extract beat information externally in aid of generating rhythmically consistent drum accompaniment audio.
 
+<div id='wrap'>
 <img id='flowchart' src='src/img/flowchart.png'>
 <img id='transformer' src='src/img/transformer.png'>
+</div>
 
 ## Demo audio
 In this demo section contains 3 parts. The first part is the comparison between different model configurations using testing data as input. The second part shows the diversity of our drum accompaniment tracks using our testing data by our best model. Finally, in the third part, we provide some results from our best model using external but famous drumless tracks as input.
