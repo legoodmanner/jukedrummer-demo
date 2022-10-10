@@ -1,8 +1,8 @@
-This is the demo page for the ISMIR2022 paper [Jukedrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
+This is the demo page for ISMIR2022 paper [Jukedrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
 
 Author: [Yueh-Kao Wu](), [Ching-Yu Chiu](https://github.com/SunnyCYC), [Yi-Hsuan Yang](http://mac.citi.sinica.edu.tw/~yang/)
 
-<iframe width="560" height="560" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="580" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 This is the demo page of Jukedrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. 
@@ -12,8 +12,14 @@ This is the demo page of Jukedrummer, the work generates a drum track in the aud
 We have our model highly refer to [Jukebox](https://github.com/openai/jukebox). While there are hundreds of self-attention layers in Jukebox, there are only 9 layers in both encoder and decoder in our work. In addition, we also apply so called "Beat Information Extractor" to extract beat information externally in aid of generating rhythmically consistent drum accompaniment audio.
 
 <div id='wrap'>
-    <img id='flowchart' src='src/img/flowchart.png' width='400px'>
-    <img id='transformer' src='src/img/transformer.png' width='440px'>
+    <figure>
+        <img id='flowchart' src='src/img/flowchart.png' width='410px'>
+        <figcaption algin='center'>Fig 1. The Flowchart of JukeDrummer</figcaption>
+    </figure>
+    <figure>
+        <img id='transformer' src='src/img/transformer.png' width='440px'>
+        <figcaption algin='center'>Fig 2. The language model of JukeDrummer</figcaption>
+    </figure>
 </div>
 
 ## Demo audio
