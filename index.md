@@ -1,11 +1,11 @@
-This is the demo page for ISMIR2022 paper [Jukedrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
+This is the demo page for ISMIR2022 paper [JukeDrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
 
 Author: [Yueh-Kao Wu](), [Ching-Yu Chiu](https://github.com/SunnyCYC), [Yi-Hsuan Yang](http://mac.citi.sinica.edu.tw/~yang/)
 
 <iframe width="560" height="580" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
-This is the demo page of Jukedrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. 
+This is the demo page of JukeDrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. 
 
 
 ## Model Structure & Configurations
@@ -25,7 +25,7 @@ We have our model highly refer to [Jukebox](https://github.com/openai/jukebox). 
 ## Demo audio
 In this demo section contains 3 parts. The first part is the comparison between different model configurations using testing data as input. The second part shows the diversity of our drum accompaniment tracks using our testing data by our best model. Finally, in the third part, we provide some results from our best model using external but famous drumless tracks as input.
 
-### Part 1
+### Part 1: Evaluation of Different Model Variants on the Test Set
 <hr>
 
 - Drumless tracks: `Drumless`
@@ -45,7 +45,7 @@ In this demo section contains 3 parts. The first part is the comparison between 
 |6.|<audio src="src/audio/part1/Q6/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part1/Q6/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part1/Q6/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part1/Q6/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part1/Q6/11.wav" controls="" preload=""></audio>|<audio src="src/audio/part1/Q6/12.wav" controls="" preload=""></audio>|
 
 
-### Part 2
+### Part 2: Evaluation on Diversity
 <hr>
 
 We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks with identical parameters and other configurations.
@@ -58,7 +58,7 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 |4.|<audio src="src/audio/part2/Q4/drumless.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/gt.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/1.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/2.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/3.wav" controls="" preload=""></audio>|<audio src="src/audio/part2/Q4/4.wav" controls="" preload=""></audio>|
 
 
-### Part 3
+### Part 3: Evaluation on External Data
 <hr>
 
 We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks with external input data. We use [spleeter](https://github.com/deezer/spleeter) to extract drumless tracks of the first and the second tracks.
@@ -99,13 +99,13 @@ We use our best model `W/ Encoder W/ BeatInfo` to reaptly generate drum tracks w
 
 ## Limitation
 
-First, our model lacks generalizability. To elaborate, according to our observation, our model is capable to perform functionally when using most of our testing data as input which is divided from the joined dataset of MUSDB18, MedleyDB, and MixingSecret prior to our training. However, the results are relatively worse when using album recording drumless music outside our joined dataset as input. We conjecture that our model is sensitive to audio compression, original sample rate, or even mixing. 
+First, the generalizability of our model is not good enough. According to our own observation, our model is capable to perform functionally when using most of our testing data as input which is divided from the joined dataset of MUSDB18, MedleyDB, and MixingSecret prior to our training. However, the results are relatively worse when using recordings of drumless music outside our joined dataset as input. We conjecture that our model is sensitive to audio compression, original sample rate, or the way the music is mixed and mastered. 
 
-Second, the stability of our model still needs to be improved. To be more specific, our model at times struggles to change its tempo going through different sections of a song. Moreover, the generation might be out of sync with the input in the beginning few seconds, until the model gets sufficient context.
+Second, the stability of our model still needs to be improved. At times, the model struggles to change its tempo going through different sections of a song. Moreover, the generation might be out of sync with the input in the beginning few seconds, until the model gets sufficient context.
 
 Last but not least, it would be helpful if the drumless input contains some "rhythmical hints", such as strong bass, rhythm guitar, and any other sources that can be conducive for our model to locate beats and downbeats. If so, the model is likely to perform better. On the other hand, if the model can't get enough clues from input to locate beats and tempo, the result of generation would be pretty bad. 
 
-To sum up, issues related to generalizability, stability, and rhythm dependency are remain significant problems that demand to be solved in future works.
+To sum up, issues related to generalizability, stability, and rhythm dependency are issues that should be addressed in future works.
 
 
 ### Contact 
