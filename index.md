@@ -1,10 +1,11 @@
+
+[Paper](https://arxiv.org/abs/2210.06007) | [Github](https://github.com/legoodmanner/jukedrummer)
+
 This is the demo page for ISMIR2022 paper [JukeDrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
 
 Author: [Yueh-Kao Wu](), [Ching-Yu Chiu](https://github.com/SunnyCYC), [Yi-Hsuan Yang](http://mac.citi.sinica.edu.tw/~yang/)
 
-[Paper](https://arxiv.org/abs/2210.06007) | [Github](https://github.com/legoodmanner/jukedrummer)
-
-<iframe width="560" height="580" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YefouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="600" height="580" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YefouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
 This is the demo page of JukeDrummer, the work generates a drum track in the audio domain to play along to a user-provided drum-free recording. Specifically, using paired data of drumless tracks and the corresponding human-made drum tracks, we train 2 vector-quantized variation autoencoders (VQ-VAE) to discretize both drumless and drum Mel spectrogram. Subsequently, we also train the Transformer to improvise the drum part of an unseen drumless recording with these discretized drum tokens. Finally, we use MelGAN as Vocoder to transform our Mel spectrogram decoded by the decoder of VQ-VAE into the audio wave. This demo page contains several results of our attempts at different domain inputs. 
