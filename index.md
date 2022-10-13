@@ -1,7 +1,9 @@
 This is the demo page for ISMIR2022 paper [JukeDrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
 
 Author: [Yueh-Kao Wu](), [Ching-Yu Chiu](https://github.com/SunnyCYC), [Yi-Hsuan Yang](http://mac.citi.sinica.edu.tw/~yang/)
+
 [Paper](https://arxiv.org/abs/2210.06007) | [Github](https://github.com/legoodmanner/jukedrummer)
+
 <iframe width="560" height="580" src="https://www.youtube.com/embed/kfsN_46Rwq0" title="YefouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Abstract
