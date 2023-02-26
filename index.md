@@ -1,14 +1,3 @@
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H3W875HP05"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H3W875HP05');
-</script>
-
 [Paper](https://arxiv.org/abs/2210.06007) | [Github](https://github.com/legoodmanner/jukedrummer)
 
 This is the demo page for ISMIR2022 paper [JukeDrummer: Conditional Beat-aware Audio-domain Drum Accompaniment Generation via Transformer VQ-VAE]()
